@@ -5,7 +5,7 @@ const parseBoolean = (value: string) => value?.toUpperCase().includes("CUMP") ??
 export const parseAdjudicados = (rows: any[]): Proceso[] => {
   return rows.map((row) => ({
     nroProceso: row["Nro Proceso ACM"],
-    descripcion: row["Descripción"],
+    descripcion: row["Descripcion"],
     importe: parseFloat(row["Imp Pesos"]) || 0,
     fechaObjetivo: row["Fecha Objetivo Adjudicación"] ?? null,
     fechaReferencia: row["Fecha referencia"] ?? null,
